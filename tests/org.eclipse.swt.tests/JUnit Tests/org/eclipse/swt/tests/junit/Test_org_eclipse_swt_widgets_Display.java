@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2000, 2025 IBM Corporation and others.
+ * Copyright (c) 2000, 2026 IBM Corporation and others.
  *
  * This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License 2.0
@@ -1593,6 +1593,11 @@ public void test_getFontListLjava_lang_StringZ() {
 		display.dispose();
 	}
 }
+
+// TODO: Display.loadFont is only tested on GTK, in Test_GtkDevice.test_loadFont
+// (tests/org.eclipse.swt.tests.gtk). On macOS getFontList does not list the
+// family of a font loaded with loadFont, although loadFont returns true. Move
+// the test here once that works on all platforms.
 
 @Test
 public void test_getWarnings() {
